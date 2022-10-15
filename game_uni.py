@@ -4,7 +4,7 @@ import math
 import sys
 
 def game():
-    """Module providingFunction printing python version."""
+    """This function takes input."""
     user = input("Enter your choise. 'p' for paper, 's' for scissor and 'r' for rock")
     #for input and display
     user = user.lower()
@@ -21,11 +21,11 @@ def game():
 
 
 def play_again_handler():
-    """Module providingFunction printing python version."""
+    """This function takes input."""
     play_again = input('Please enter Y to play again or N to exit the game.')
     play_again = play_again.lower()
     if play_again=='y':
-        game()
+        game_best_of(0)
         #break functiong
         return
     if play_again=='n':
@@ -37,18 +37,18 @@ def play_again_handler():
         return
 
 def pr_check(player,opponent):
-    """Module providingFunction printing python version."""
+    """This function takes input."""
     return (player=='p' and opponent=='r')
 
 def is_win(player, opponent):
-    """Module providingFunction printing python version."""
+    """This function takes input."""
     #will return true if the player wins against the computer
     #winning condition for the player: s>p, p>r and r>s
     return (player == 'r' and opponent == 's') or (player == 's'
     and opponent == 'p') or pr_check(player,opponent)
 
 def game_best_of(num_score):
-    """Module providingFunction printing python version."""
+    """This function takes input."""
     #to fix match for certain rounds
     player_wins = 0
     #initial value of the player
